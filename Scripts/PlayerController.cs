@@ -9,7 +9,9 @@ public class PlayerController : MonoBehaviour
     Mode currentMode;
 
     public CharacterController controller;
+    public float animationCrossFadeTime; // .01
     public Transform cam;
+    [SerializeField] public Animator animator;
     public PlayerStatsScript playerStats;
 
     public IInteractable interactableObject;
@@ -77,12 +79,16 @@ public class PlayerController : MonoBehaviour
 
         if (direction.magnitude >= 0.1f)
         {
+            animator.Play("Walk");
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             controller.Move(moveDir.normalized * walkSpeed * Time.deltaTime);
+        } else
+        {   
+            //animator.CrossFade("Idle", animationCrossFadeTime);
         }
     }
 
@@ -93,6 +99,7 @@ public class PlayerController : MonoBehaviour
             if (interactableObject.CanInteractWith(this))
             {
                 interactableObject.InteractWith(this);
+                animator.Play("Chop_Idle");
             }
         }
     }
@@ -205,6 +212,7 @@ public class PlayerController : MonoBehaviour
         if (farmingTarget != null && toolForFarming != null && Input.GetMouseButtonDown(0))
         {
             toolForFarming.Farm(farmingTarget);
+            animator.Play("Chop_Action", 0, 0);
             ChargeStaminaCost();
         }
     }
