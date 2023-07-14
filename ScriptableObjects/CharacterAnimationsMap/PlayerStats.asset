@@ -9,15 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d965ba5221d1a9448bd646a43550e7c7, type: 3}
-  m_Name: Axe
+  m_Script: {fileID: 11500000, guid: 2fc798882f13cc74f863fba5c1db5eef, type: 3}
+  m_Name: PlayerStats
   m_EditorClassIdentifier: 
-  toolDataId: 1
-  toolName: Axe
-  damagePerLvlArr:
-  - 10
-  - 15
-  staminaCostPerLvlArr:
-  - 15
-  farmeableResources:
-  - {fileID: 11400000, guid: 11b0b14bac91450469c9ea3beb821193, type: 2}
+  walkSpeed: 6
+  runSpeed: 15
+  baseHP: 100
+  baseStamina: 100
+  staminaRegenrationRate: 3

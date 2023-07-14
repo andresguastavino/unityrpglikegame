@@ -399,41 +399,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 174183279}
-  animationCrossFadeTime: 0
+  stats: {fileID: 11400000, guid: 20b722256672c2143a18c5bd9aaff01d, type: 2}
   cam: {fileID: 963194228}
-  animator: {fileID: 174183278}
-  playerStats: {fileID: 2035812441}
-  walkSpeed: 6
-  sprintSpeed: 15
-  turnSmoothTime: 0.1
-  range: 3
-  turnSmoothVelocity: 0
-  layer:
-    serializedVersion: 2
-    m_Bits: 128
-  woodAmount: 0
-  rockAmount: 0
-  stamina: 100
-  staminaRegenrationRate: 3
-  health: 100
-  onInteractEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 547891670}
-        m_TargetAssemblyTypeName: ResourceController, Assembly-CSharp
-        m_MethodName: InteractWith
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1607838795}
-          m_ObjectArgumentAssemblyTypeName: PlayerController, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  tools:
-  - {fileID: 1136044687}
-  - {fileID: 5936096775586334332, guid: fb7feeb99f3d0d6468c7979eb9e7c37e, type: 3}
 --- !u!95 &174183278
 Animator:
   serializedVersion: 5
@@ -767,17 +734,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &547891670 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 434657313540412932, guid: 1f8b4857ea8bece4894cc97267ac29cf, type: 3}
-  m_PrefabInstance: {fileID: 3516865812142576729}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8fae584f49c44440b30558dddb31adc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &616084176
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,7 +745,6 @@ GameObject:
   - component: {fileID: 616084180}
   - component: {fileID: 616084179}
   - component: {fileID: 616084178}
-  - component: {fileID: 616084181}
   - component: {fileID: 616084177}
   m_Layer: 7
   m_Name: Rock
@@ -876,21 +831,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &616084181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 616084176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8fae584f49c44440b30558dddb31adc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  resourceData: {fileID: 11400000, guid: 741486c4757f98d40ba81415a9bb72af, type: 2}
-  statsBillboard: {fileID: 2250616116581482998, guid: dde5739f780ce3c489d40e84a8741bf0, type: 3}
-  stats: {fileID: 0}
 --- !u!1 &696634125
 GameObject:
   m_ObjectHideFlags: 0
@@ -1347,7 +1287,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 882482021}
-  m_LocalRotation: {x: 0.12451125, y: 0.00000001280436, z: -0.0000000016067905, w: 0.9922182}
+  m_LocalRotation: {x: 0.12451125, y: -0.000000012804366, z: 0.000000001606791, w: 0.9922182}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1498,7 +1438,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 921916724}
-  m_LocalRotation: {x: 0.14253858, y: -0.000000008515348, z: 0.0000000012262868, w: 0.98978925}
+  m_LocalRotation: {x: 0.14253858, y: -0.000000008515345, z: 0.0000000012262865, w: 0.98978925}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1584,7 +1524,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.12451124, y: 0.000000032223607, z: -0.0000000040436685, w: 0.9922182}
+  m_LocalRotation: {x: 0.12451124, y: -0.000000032223607, z: 0.0000000040436685, w: 0.9922182}
   m_LocalPosition: {x: 7.081369, y: 5, z: -35.862133}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1694,17 +1634,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1136044687 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 280096685390883375, guid: aa8879270bce28442bd178e91c2fd67d, type: 3}
-  m_PrefabInstance: {fileID: 3785413672092836398}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855b8595a0d3c9647b42a3af9d1a304f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1146182749 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 684e3892e0ec93f44aad9164be1cd3a5, type: 3}
@@ -1723,41 +1652,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
-  animationCrossFadeTime: 0
-  cam: {fileID: 963194228}
-  animator: {fileID: 0}
-  playerStats: {fileID: 2035812441}
-  walkSpeed: 6
-  sprintSpeed: 15
-  turnSmoothTime: 0.1
-  range: 3
-  turnSmoothVelocity: 0
-  layer:
-    serializedVersion: 2
-    m_Bits: 128
-  woodAmount: 0
-  rockAmount: 0
-  stamina: 100
-  staminaRegenrationRate: 3
-  health: 100
-  onInteractEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 547891670}
-        m_TargetAssemblyTypeName: ResourceController, Assembly-CSharp
-        m_MethodName: InteractWith
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1607838795}
-          m_ObjectArgumentAssemblyTypeName: PlayerController, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  tools:
-  - {fileID: 1136044687}
-  - {fileID: 5936096775586334332, guid: fb7feeb99f3d0d6468c7979eb9e7c37e, type: 3}
+  stats: {fileID: 0}
+  cam: {fileID: 0}
 --- !u!143 &1146182752
 CharacterController:
   m_ObjectHideFlags: 0
@@ -2087,6 +1983,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1343837419}
   m_CullTransparentMesh: 1
+--- !u!1 &1362325977
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1362325979}
+  - component: {fileID: 1362325978}
+  m_Layer: 0
+  m_Name: ConstantsLibrary
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1362325978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362325977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ed485d05319f0945a8565d7d845fff2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1362325979
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362325977}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1473239341
 GameObject:
   m_ObjectHideFlags: 0
@@ -2185,17 +2125,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1607838795 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 707230034547691216, guid: 1ae1b0aef6d356448bb2139a7afd34bf, type: 3}
-  m_PrefabInstance: {fileID: 707230035698621622}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d2e723b28adeec49ab13ec216e208e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1629842207
 GameObject:
   m_ObjectHideFlags: 0
@@ -2370,42 +2299,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d2e723b28adeec49ab13ec216e208e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 1658538958}
-  animationCrossFadeTime: 0
-  cam: {fileID: 963194228}
-  animator: {fileID: 1658538957}
-  playerStats: {fileID: 2035812441}
-  walkSpeed: 6
-  sprintSpeed: 15
-  turnSmoothTime: 0.1
-  range: 3
-  turnSmoothVelocity: 0
-  layer:
-    serializedVersion: 2
-    m_Bits: 128
-  woodAmount: 0
-  rockAmount: 0
-  stamina: 100
-  staminaRegenrationRate: 3
-  health: 100
-  onInteractEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 547891670}
-        m_TargetAssemblyTypeName: ResourceController, Assembly-CSharp
-        m_MethodName: InteractWith
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1607838795}
-          m_ObjectArgumentAssemblyTypeName: PlayerController, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  tools:
-  - {fileID: 1136044687}
-  - {fileID: 5936096775586334332, guid: fb7feeb99f3d0d6468c7979eb9e7c37e, type: 3}
+  controller: {fileID: 0}
+  stats: {fileID: 0}
+  cam: {fileID: 0}
 --- !u!95 &1658538957
 Animator:
   serializedVersion: 5
@@ -2868,14 +2764,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbdc28e2531a96b4099f9637cce41815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBarSlider: {fileID: 351153097}
-  staminaBarSlider: {fileID: 696634127}
-  healthBarText: {fileID: 224154196}
-  staminaBarText: {fileID: 1629842209}
-  maxHealth: 0
-  currentHealth: 0
-  maxStamina: 0
-  currentStamina: 0
 --- !u!1 &2082236911
 GameObject:
   m_ObjectHideFlags: 0
@@ -3287,7 +3175,7 @@ PrefabInstance:
     - target: {fileID: 707230034547691216, guid: 1ae1b0aef6d356448bb2139a7afd34bf, type: 3}
       propertyPath: onInteractEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 547891670}
+      objectReference: {fileID: 0}
     - target: {fileID: 707230034547691220, guid: 1ae1b0aef6d356448bb2139a7afd34bf, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -4121,7 +4009,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 434657313540412932, guid: 1f8b4857ea8bece4894cc97267ac29cf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1f8b4857ea8bece4894cc97267ac29cf, type: 3}
 --- !u!1001 &3785413672092836398
 PrefabInstance:
@@ -4178,5 +4067,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pickaxe
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 280096685390883375, guid: aa8879270bce28442bd178e91c2fd67d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: aa8879270bce28442bd178e91c2fd67d, type: 3}
